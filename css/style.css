@@ -72,9 +72,6 @@ ul {
 .header {
     background: #8B5E3C;
     padding: 18px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .header-inner {
