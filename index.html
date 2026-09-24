@@ -204,27 +204,39 @@
         </section>
 
         <!-- Форма -->
-        <section class="contacts" id="contacts">
-            <div class="container">
-                <h2 class="section-title">Оставить заявку</h2>
-                <p class="contacts-text">Оставьте заявку — и я свяжусь с вами, чтобы обсудить заказ</p>
-                <form class="form" action="#">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Ваше имя</label>
-                        <input type="text" id="name" class="form-input" placeholder="Иван Иванов">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="form-label">Телефон</label>
-                        <input type="number" id="phone" class="form-input" placeholder="+7 (___) ___-__-__">
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Что хотите заказать?</label>
-                        <textarea id="message" class="form-textarea" placeholder="Например: торт на день рождения, 2 кг, шоколадный..."></textarea>
-                    </div>
-                    <button type="submit" class="btn form-btn">Отправить</button>
-                </form>
+<section class="contacts" id="contacts">
+    <div class="container">
+        <h2 class="section-title">Оставить заявку</h2>
+        <p class="contacts-text">Оставьте заявку — и я свяжусь с вами, чтобы обсудить заказ</p>
+
+        <form class="form" action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Ключ Web3Forms -->
+            <input type="hidden" name="access_key" value="f2ac83b2-2492-4ac2-801c-5122c7430a74">
+
+            <!-- Настройки письма -->
+            <input type="hidden" name="subject" value="Новая заявка с сайта Maison Douce">
+            <input type="hidden" name="from_name" value="Maison Douce">
+
+            <!-- Защита от ботов -->
+            <input type="checkbox" name="botcheck" style="display: none;">
+
+            <div class="form-group">
+                <label for="name" class="form-label">Ваше имя</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Иван Иванов" required>
             </div>
-        </section>
+            <div class="form-group">
+                <label for="phone" class="form-label">Телефон</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="form-group">
+                <label for="message" class="form-label">Что хотите заказать?</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Например: торт на день рождения, 2 кг, шоколадный..."></textarea>
+            </div>
+            <button type="submit" class="btn form-btn">Отправить</button>
+        </form>
+    </div>
+</section>
 
     </main>
 
