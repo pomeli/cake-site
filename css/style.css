@@ -1,0 +1,561 @@
+/* сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #3E2723;
+    background: #FFF8F0;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* заголовки секций */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #8B5E3C;
+}
+
+/* кнопки */
+.btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background: #8B5E3C;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #8B5E3C;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: #D4A574;
+    border-color: #D4A574;
+    color: #3E2723;
+}
+
+/* шапка */
+.header {
+    background: #8B5E3C;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFF8F0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 400;
+    font-style: italic;
+    color: #D4A574;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+}
+
+.logo:hover {
+    color: #D4A574;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #FFF8F0;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #D4A574;
+}
+
+/* главный блок */
+.hero {
+    height: 450px;
+    background: linear-gradient(135deg, #3E2723 0%, #8B5E3C 50%, #D4A574 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: #FFFFFF;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* о нас */
+.about {
+    padding: 80px 0;
+    background: #FFF8F0;
+}
+
+.about-inner {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-img-wrap {
+    flex: 0 0 45%;
+}
+
+.about-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(139, 94, 60, 0.2);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+/* сертификаты */
+.certificates {
+    background: #F5E6D3;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.certificates-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #8B5E3C;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.certificates-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.certificates-item {
+    font-size: 15px;
+    color: #3E2723;
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.certificates-item::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #8B5E3C;
+    font-weight: 700;
+}
+
+/* каталог */
+.catalog {
+    padding: 80px 0;
+    background: #F5E6D3;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card {
+    flex: 0 1 calc(33.333% - 17px);
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(139, 94, 60, 0.25);
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #8B5E3C;
+    margin: 20px 15px 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #6D4C41;
+    margin: 0 15px 15px;
+}
+
+.card-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #8B5E3C;
+}
+
+/* преимущества */
+.features {
+    padding: 80px 0;
+    background: #FFF8F0;
+}
+
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    padding: 30px 20px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 2px solid #F5E6D3;
+    transition: border-color 0.3s;
+}
+
+.feature:hover {
+    border-color: #D4A574;
+}
+
+.feature-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #8B5E3C;
+    margin-bottom: 10px;
+}
+
+.feature-text {
+    font-size: 14px;
+    color: #6D4C41;
+}
+
+/* галерея */
+.gallery {
+    padding: 80px 0;
+    background: #F5E6D3;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery-img {
+    flex: 1 1 calc(33.333% - 10px);
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+}
+
+/* отзывы */
+.reviews {
+    padding: 80px 0;
+    background: #FFF8F0;
+}
+
+.reviews-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.review {
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px 25px;
+    border-left: 5px solid #D4A574;
+}
+
+.review-text {
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #3E2723;
+}
+
+.review-author {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8B5E3C;
+    text-align: right;
+}
+
+/* форма */
+.contacts {
+    padding: 80px 0;
+    background: #F5E6D3;
+}
+
+.contacts-text {
+    text-align: center;
+    font-size: 16px;
+    color: #6D4C41;
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+.form {
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8B5E3C;
+    margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea {
+    padding: 13px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border: 2px solid #D4A574;
+    border-radius: 8px;
+    background: #FFFFFF;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #8B5E3C;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-btn {
+    align-self: center;
+}
+
+/* подвал */
+.footer {
+    background: #8B5E3C;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-copy {
+    color: #FFF8F0;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-contact {
+    color: #D4A574;
+    font-size: 14px;
+}
+
+/* адаптив: планшеты */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .about-inner {
+        flex-direction: column;
+    }
+
+    .about-img-wrap {
+        flex: 1;
+        width: 100%;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 13px);
+    }
+
+    .features-list,
+    .reviews-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feature,
+    .review {
+        flex: 1 1 45%;
+        max-width: 400px;
+    }
+
+    .gallery-img {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+/* адаптив: мобильные */
+@media (max-width: 600px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-list {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .about,
+    .catalog,
+    .features,
+    .gallery,
+    .reviews,
+    .contacts {
+        padding: 50px 0;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .feature,
+    .review {
+        flex: 1 1 100%;
+    }
+
+    .gallery-img {
+        flex: 1 1 100%;
+    }
+
+    .form-btn {
+        width: 100%;
+    }
+}
